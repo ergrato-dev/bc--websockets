@@ -799,16 +799,16 @@ Cada semana incluye **tres tipos de evidencias**:
 
 Cada semana se crea **en este orden exacto**, sin saltarse pasos:
 
-| # | Artefacto | Notas clave |
-|---|-----------|-------------|
-| 1 | `README.md` de la semana | Objetivos, requisitos previos, estructura, distribución 8h, entregables, navegación |
-| 2 | `rubrica-evaluacion.md` | Criterios 🧠 30% / 💪 40% / 📦 30% — mínimo 70% cada uno |
-| 3 | `1-teoria/` (archivos `.md`) | Explicar conceptos antes de crear los diagramas |
-| 4 | `0-assets/` (diagramas SVG) | Se crean **después** de redactar la teoría, para saber exactamente qué diagramas son necesarios. La **cantidad de SVGs depende de los temas**, no de ningún número fijo ni del repo de referencia. Cada SVG se **renderiza en el archivo de teoría** donde aporta comprensión, con `![descripción](../../0-assets/nombre.svg)` |
-| 5 | `2-practicas/` | Código comentado para descomentar — NO TODOs |
-| 6 | `3-proyecto/` | Código con TODOs — NO código comentado |
-| 7 | `4-recursos/` | ebooks, videografía, webgrafía |
-| 8 | `5-glosario/README.md` | Mínimo 8 términos, ordenados alfabéticamente |
+| #   | Artefacto                    | Notas clave                                                                                                                                                                                                                                                                                                                    |
+| --- | ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| 1   | `README.md` de la semana     | Objetivos, requisitos previos, estructura, distribución 8h, entregables, navegación                                                                                                                                                                                                                                            |
+| 2   | `rubrica-evaluacion.md`      | Criterios 🧠 30% / 💪 40% / 📦 30% — mínimo 70% cada uno                                                                                                                                                                                                                                                                       |
+| 3   | `1-teoria/` (archivos `.md`) | Explicar conceptos antes de crear los diagramas                                                                                                                                                                                                                                                                                |
+| 4   | `0-assets/` (diagramas SVG)  | Se crean **después** de redactar la teoría, para saber exactamente qué diagramas son necesarios. La **cantidad de SVGs depende de los temas**, no de ningún número fijo ni del repo de referencia. Cada SVG se **renderiza en el archivo de teoría** donde aporta comprensión, con `![descripción](../../0-assets/nombre.svg)` |
+| 5   | `2-practicas/`               | Código comentado para descomentar — NO TODOs                                                                                                                                                                                                                                                                                   |
+| 6   | `3-proyecto/`                | Código con TODOs — NO código comentado                                                                                                                                                                                                                                                                                         |
+| 7   | `4-recursos/`                | ebooks, videografía, webgrafía                                                                                                                                                                                                                                                                                                 |
+| 8   | `5-glosario/README.md`       | Mínimo 8 términos, ordenados alfabéticamente                                                                                                                                                                                                                                                                                   |
 
 > ⚠️ **El paso 4 es crítico**: los SVGs son consecuencia del contenido teórico, no un requisito fijo.
 > No crear SVGs por cubrir una cuota — crear solo los que añadan comprensión real.

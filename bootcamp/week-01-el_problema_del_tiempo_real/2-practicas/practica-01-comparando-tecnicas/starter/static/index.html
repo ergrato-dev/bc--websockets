@@ -1,11 +1,16 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Práctica 01 — Comparando Técnicas</title>
   <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
     body {
       font-family: Inter, system-ui, sans-serif;
@@ -62,10 +67,19 @@
       transition: opacity 0.3s;
     }
 
-    .badge.activo { opacity: 1; }
+    .badge.activo {
+      opacity: 1;
+    }
 
-    .badge-polling  { color: #DA3633; border-color: #DA3633; }
-    .badge-websocket { color: #2EA043; border-color: #2EA043; }
+    .badge-polling {
+      color: #DA3633;
+      border-color: #DA3633;
+    }
+
+    .badge-websocket {
+      color: #2EA043;
+      border-color: #2EA043;
+    }
 
     .panel {
       background: #0D1117;
@@ -77,9 +91,19 @@
       font-size: 0.9rem;
     }
 
-    .panel .metrica { margin-bottom: 0.4rem; }
-    .panel strong { color: #4D9FEC; }
-    .panel .ts { font-size: 0.75rem; color: #6E7681; margin-top: 0.6rem; }
+    .panel .metrica {
+      margin-bottom: 0.4rem;
+    }
+
+    .panel strong {
+      color: #4D9FEC;
+    }
+
+    .panel .ts {
+      font-size: 0.75rem;
+      color: #6E7681;
+      margin-top: 0.6rem;
+    }
 
     .contador-wrap {
       margin-top: 1rem;
@@ -92,8 +116,13 @@
       font-size: 1.1rem;
     }
 
-    #contador-polling { color: #DA3633; }
-    #contador-ws      { color: #2EA043; }
+    #contador-polling {
+      color: #DA3633;
+    }
+
+    #contador-ws {
+      color: #2EA043;
+    }
 
     .tip {
       margin-top: 2rem;
@@ -106,9 +135,12 @@
       color: #8B949E;
     }
 
-    .tip strong { color: #E3B341; }
+    .tip strong {
+      color: #E3B341;
+    }
   </style>
 </head>
+
 <body>
   <h1>Práctica 01 — Comparando Técnicas de Tiempo Real</h1>
   <p class="subtitulo">
@@ -154,4 +186,5 @@
 
   <script src="/static/app.js"></script>
 </body>
+
 </html>

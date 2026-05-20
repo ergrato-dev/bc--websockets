@@ -1,11 +1,16 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Monitor de Métricas</title>
   <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
     body {
       font-family: Inter, system-ui, sans-serif;
@@ -48,7 +53,9 @@
       border-bottom: 1px solid #21262D;
     }
 
-    .metrica:last-of-type { border-bottom: none; }
+    .metrica:last-of-type {
+      border-bottom: none;
+    }
 
     .metrica-label {
       font-size: 0.85rem;
@@ -73,10 +80,16 @@
       color: #6E7681;
     }
 
-    #estado { font-weight: 600; }
-    #timestamp { font-family: 'Courier New', monospace; }
+    #estado {
+      font-weight: 600;
+    }
+
+    #timestamp {
+      font-family: 'Courier New', monospace;
+    }
   </style>
 </head>
+
 <body>
   <h1>Monitor de Métricas del Servidor</h1>
   <p class="subtitulo">Proyecto Semana 01 — WebSockets Bootcamp</p>
@@ -103,4 +116,5 @@
 
   <script src="/static/monitor.js"></script>
 </body>
+
 </html>
