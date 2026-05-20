@@ -1,0 +1,132 @@
+<svg width="800" height="260" viewBox="0 0 800 260"
+  xmlns="http://www.w3.org/2000/svg" font-family="Inter, 'Segoe UI', Roboto, system-ui, -apple-system, sans-serif">
+
+  <defs>
+    <marker id="a-blue" viewBox="0 0 8 6" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0,8 3,0 6" fill="#0066CC"/>
+    </marker>
+    <marker id="a-green" viewBox="0 0 8 6" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0,8 3,0 6" fill="#3FB950"/>
+    </marker>
+    <marker id="a-orange" viewBox="0 0 8 6" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0,8 3,0 6" fill="#F0883E"/>
+    </marker>
+    <marker id="a-red" viewBox="0 0 8 6" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0,8 3,0 6" fill="#DC382D"/>
+    </marker>
+    <marker id="a-gray" viewBox="0 0 8 6" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0,8 3,0 6" fill="#8B949E"/>
+    </marker>
+  </defs>
+
+  <!-- ─── Background ─────────────────────────────────── -->
+  <rect width="800" height="260" fill="#0D1117"/>
+
+  <!-- ─── Accent borders ────────────────────────────── -->
+  <rect x="0" y="0" width="800" height="3" fill="#0066CC"/>
+  <rect x="0" y="3" width="4" height="254" fill="#0066CC"/>
+  <rect x="0" y="257" width="800" height="3" fill="#0066CC"/>
+
+  <!-- ═══════════════════════════════════════════════════
+       LEFT — BRANDING  (x 0–455)
+  ════════════════════════════════════════════════════ -->
+
+  <!-- Mini WS logo pill -->
+  <rect x="28" y="18" width="30" height="18" rx="3" fill="#0066CC"/>
+  <text x="43" y="31" font-size="11" font-weight="800" fill="#FFFFFF" text-anchor="middle">WS</text>
+
+  <!-- BOOTCAMP label -->
+  <text x="66" y="31" font-size="10" font-weight="700" letter-spacing="3" fill="#0066CC">BOOTCAMP</text>
+
+  <!-- Main title -->
+  <text x="28" y="100" font-size="54" font-weight="800" fill="#E6EDF3">WebSockets</text>
+
+  <!-- Tagline -->
+  <text x="31" y="132" font-size="22" font-weight="300" fill="#0066CC">Zero to Hero</text>
+
+  <!-- Thin rule -->
+  <line x1="28" y1="150" x2="418" y2="150" stroke="#21262D" stroke-width="1"/>
+
+  <!-- Tech badges (pill with left-color accent) -->
+
+  <!-- Python -->
+  <rect x="28" y="160" width="84" height="22" rx="3" fill="#161B22"/>
+  <rect x="28" y="160" width="3" height="22" rx="1" fill="#3776AB"/>
+  <text x="73" y="175" font-size="10" fill="#8B949E" text-anchor="middle">Python 3.12</text>
+
+  <!-- FastAPI -->
+  <rect x="120" y="160" width="60" height="22" rx="3" fill="#161B22"/>
+  <rect x="120" y="160" width="3" height="22" rx="1" fill="#009688"/>
+  <text x="152" y="175" font-size="10" fill="#8B949E" text-anchor="middle">FastAPI</text>
+
+  <!-- TypeScript -->
+  <rect x="188" y="160" width="84" height="22" rx="3" fill="#161B22"/>
+  <rect x="188" y="160" width="3" height="22" rx="1" fill="#3178C6"/>
+  <text x="232" y="175" font-size="10" fill="#8B949E" text-anchor="middle">TypeScript 5</text>
+
+  <!-- Redis -->
+  <rect x="280" y="160" width="52" height="22" rx="3" fill="#161B22"/>
+  <rect x="280" y="160" width="3" height="22" rx="1" fill="#DC382D"/>
+  <text x="308" y="175" font-size="10" fill="#DC382D" text-anchor="middle">Redis 7</text>
+
+  <!-- RFC 6455 -->
+  <rect x="340" y="160" width="72" height="22" rx="3" fill="#161B22"/>
+  <rect x="340" y="160" width="3" height="22" rx="1" fill="#30363D"/>
+  <text x="378" y="175" font-size="10" fill="#8B949E" text-anchor="middle">RFC 6455</text>
+
+  <!-- Meta info -->
+  <text x="28" y="214" font-size="12" fill="#484F58">12 semanas · 96 horas · 8h/semana</text>
+  <text x="28" y="232" font-size="11" fill="#30363D">Docker · nginx · uv · pnpm</text>
+
+  <!-- ═══════════════════════════════════════════════════
+       SECTION DIVIDER
+  ════════════════════════════════════════════════════ -->
+  <line x1="456" y1="16" x2="456" y2="244" stroke="#21262D" stroke-width="1"/>
+
+  <!-- ═══════════════════════════════════════════════════
+       RIGHT — WS HANDSHAKE DIAGRAM  (x 456–800)
+  ════════════════════════════════════════════════════ -->
+
+  <!-- CLIENT lifeline -->
+  <rect x="491" y="28" width="76" height="22" rx="3" fill="#161B22"/>
+  <text x="529" y="43" font-size="11" font-weight="600" fill="#8B949E" text-anchor="middle">CLIENT</text>
+  <line x1="529" y1="50" x2="529" y2="244" stroke="#30363D" stroke-width="1" stroke-dasharray="4,3"/>
+
+  <!-- SERVER lifeline -->
+  <rect x="700" y="28" width="76" height="22" rx="3" fill="#161B22"/>
+  <text x="738" y="43" font-size="11" font-weight="600" fill="#8B949E" text-anchor="middle">SERVER</text>
+  <line x1="738" y1="50" x2="738" y2="244" stroke="#30363D" stroke-width="1" stroke-dasharray="4,3"/>
+
+  <!-- Step 1 → HTTP Upgrade -->
+  <line x1="534" y1="76" x2="728" y2="76" stroke="#8B949E" stroke-width="1.5" marker-end="url(#a-gray)"/>
+  <text x="631" y="70" font-size="9.5" fill="#8B949E" text-anchor="middle" font-family="'Courier New', Courier, monospace">GET /ws  Upgrade: websocket</text>
+
+  <!-- Step 2 ← 101 Switching Protocols -->
+  <line x1="738" y1="101" x2="544" y2="101" stroke="#3FB950" stroke-width="1.5" marker-end="url(#a-green)"/>
+  <text x="631" y="95" font-size="9.5" fill="#3FB950" text-anchor="middle" font-family="'Courier New', Courier, monospace">101 Switching Protocols</text>
+
+  <!-- WS Open separator -->
+  <line x1="474" y1="118" x2="784" y2="118" stroke="#21262D" stroke-width="1"/>
+  <rect x="573" y="111" width="116" height="14" rx="2" fill="#0D1117"/>
+  <text x="631" y="122" font-size="9" fill="#0066CC" text-anchor="middle">&#x26A1; WebSocket Established</text>
+
+  <!-- Step 3 → ws.send -->
+  <line x1="534" y1="144" x2="728" y2="144" stroke="#0066CC" stroke-width="1.5" marker-end="url(#a-blue)"/>
+  <text x="631" y="138" font-size="9.5" fill="#0066CC" text-anchor="middle" font-family="'Courier New', Courier, monospace">ws.send("message")</text>
+
+  <!-- Step 4 ← broadcast -->
+  <line x1="738" y1="169" x2="544" y2="169" stroke="#F0883E" stroke-width="1.5" marker-end="url(#a-orange)"/>
+  <text x="631" y="163" font-size="9.5" fill="#F0883E" text-anchor="middle" font-family="'Courier New', Courier, monospace">broadcast &#x2192; all clients</text>
+
+  <!-- Step 5 → Redis pub/sub -->
+  <line x1="534" y1="197" x2="728" y2="197" stroke="#DC382D" stroke-width="1.5" marker-end="url(#a-red)"/>
+  <text x="631" y="191" font-size="9.5" fill="#DC382D" text-anchor="middle" font-family="'Courier New', Courier, monospace">Redis pub/sub &#x2192; scale</text>
+
+  <!-- Step indicators -->
+  <text x="470" y="79" font-size="8" fill="#484F58" text-anchor="end">1</text>
+  <text x="470" y="104" font-size="8" fill="#484F58" text-anchor="end">2</text>
+  <text x="470" y="147" font-size="8" fill="#484F58" text-anchor="end">3</text>
+  <text x="470" y="172" font-size="8" fill="#484F58" text-anchor="end">4</text>
+  <text x="470" y="200" font-size="8" fill="#484F58" text-anchor="end">5</text>
+
+</svg>
