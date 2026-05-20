@@ -1,0 +1,149 @@
+# =============================================================================
+# Bootcamp WebSockets Zero to Hero — .gitignore
+# =============================================================================
+
+# =============================================================================
+# ⚠️  BOOTCAMP — Soluciones de instructor (NUNCA subir al repo público)
+# =============================================================================
+**/solution/
+**/solutions/
+
+# =============================================================================
+# Python
+# =============================================================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+*.pyd
+
+# Entornos virtuales
+.venv/
+venv/
+env/
+.env.bak
+
+# uv
+.uv/
+
+# Distribución / empaquetado
+*.egg-info/
+dist/
+build/
+*.egg
+*.whl
+MANIFEST
+
+# Testing / cobertura
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+*.xml
+nosetests.xml
+junit*.xml
+
+# mypy / pyright / type checkers
+.mypy_cache/
+.dmypy.json
+dmypy.json
+.pytype/
+.pyre/
+
+# =============================================================================
+# Node.js / TypeScript / Vite
+# =============================================================================
+node_modules/
+
+# Build output
+dist/
+build/
+.vite/
+*.tsbuildinfo
+
+# Testing / cobertura
+coverage/
+.nyc_output/
+
+# =============================================================================
+# Variables de entorno — NUNCA commitear valores reales
+# =============================================================================
+.env
+.env.local
+.env.*.local
+!.env.example
+
+# =============================================================================
+# Docker
+# =============================================================================
+# Volúmenes y datos locales de contenedores
+docker-volumes/
+
+# =============================================================================
+# Redis
+# =============================================================================
+dump.rdb
+*.rdb
+appendonly.aof
+
+# =============================================================================
+# TLS / Certificados — NUNCA subir claves privadas
+# =============================================================================
+*.key
+*.pem
+*.crt
+*.cer
+*.p12
+*.pfx
+certs/
+ssl/
+
+# =============================================================================
+# Logs
+# =============================================================================
+*.log
+logs/
+nginx/logs/
+
+# =============================================================================
+# Editores e IDEs
+# =============================================================================
+# VS Code — mantener .vscode/settings.json y extensions.json pero ignorar
+# configuraciones personales y depuración
+.vscode/launch.json
+.vscode/*.code-workspace
+.vscode/tasks.json
+
+# JetBrains
+.idea/
+*.iml
+
+# Vim / Emacs
+*.swp
+*.swo
+*~
+\#*\#
+
+# =============================================================================
+# Sistema operativo
+# =============================================================================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# =============================================================================
+# Temporales y misceláneos
+# =============================================================================
+*.tmp
+*.temp
+*.bak
+*.orig
+.cache/
+tmp/
+temp/
