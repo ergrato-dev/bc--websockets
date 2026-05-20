@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Práctica 01 — Comparando Técnicas</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: Inter, system-ui, sans-serif;
+      background: #0D1117;
+      color: #E6EDF3;
+      padding: 2rem;
+    }
+
+    h1 {
+      font-size: 1.4rem;
+      font-weight: 600;
+      margin-bottom: 0.4rem;
+      color: #E6EDF3;
+    }
+
+    .subtitulo {
+      font-size: 0.85rem;
+      color: #8B949E;
+      margin-bottom: 2rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+    }
+
+    .tarjeta {
+      background: #161B22;
+      border: 1px solid #30363D;
+      border-radius: 10px;
+      padding: 1.5rem;
+    }
+
+    .tarjeta-header {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 1.2rem;
+    }
+
+    .tarjeta-header h2 {
+      font-size: 1rem;
+      font-weight: 600;
+    }
+
+    .badge {
+      font-size: 0.7rem;
+      font-weight: 600;
+      padding: 0.2rem 0.6rem;
+      border-radius: 99px;
+      border: 1px solid;
+      opacity: 0.4;
+      transition: opacity 0.3s;
+    }
+
+    .badge.activo { opacity: 1; }
+
+    .badge-polling  { color: #DA3633; border-color: #DA3633; }
+    .badge-websocket { color: #2EA043; border-color: #2EA043; }
+
+    .panel {
+      background: #0D1117;
+      border: 1px solid #21262D;
+      border-radius: 6px;
+      padding: 1rem;
+      min-height: 90px;
+      font-family: 'Courier New', monospace;
+      font-size: 0.9rem;
+    }
+
+    .panel .metrica { margin-bottom: 0.4rem; }
+    .panel strong { color: #4D9FEC; }
+    .panel .ts { font-size: 0.75rem; color: #6E7681; margin-top: 0.6rem; }
+
+    .contador-wrap {
+      margin-top: 1rem;
+      font-size: 0.8rem;
+      color: #8B949E;
+    }
+
+    .contador-wrap span {
+      font-weight: 700;
+      font-size: 1.1rem;
+    }
+
+    #contador-polling { color: #DA3633; }
+    #contador-ws      { color: #2EA043; }
+
+    .tip {
+      margin-top: 2rem;
+      background: #161B22;
+      border: 1px solid #30363D;
+      border-left: 4px solid #E3B341;
+      border-radius: 6px;
+      padding: 1rem 1.2rem;
+      font-size: 0.85rem;
+      color: #8B949E;
+    }
+
+    .tip strong { color: #E3B341; }
+  </style>
+</head>
+<body>
+  <h1>Práctica 01 — Comparando Técnicas de Tiempo Real</h1>
+  <p class="subtitulo">
+    Mismos datos, dos transportes. Abre el Network tab y observa la diferencia.
+  </p>
+
+  <div class="grid">
+    <!-- Panel Polling -->
+    <div class="tarjeta">
+      <div class="tarjeta-header">
+        <h2>🔁 Short Polling</h2>
+        <span id="badge-polling" class="badge badge-polling">activo</span>
+      </div>
+      <div id="panel-polling" class="panel">
+        <span style="color:#484F58">Esperando activación (Paso 3)...</span>
+      </div>
+      <div class="contador-wrap">
+        Requests enviados: <span id="contador-polling">0</span>
+      </div>
+    </div>
+
+    <!-- Panel WebSocket -->
+    <div class="tarjeta">
+      <div class="tarjeta-header">
+        <h2>⚡ WebSocket</h2>
+        <span id="badge-websocket" class="badge badge-websocket">activo</span>
+      </div>
+      <div id="panel-websocket" class="panel">
+        <span style="color:#484F58">Esperando activación (Paso 5)...</span>
+      </div>
+      <div class="contador-wrap">
+        Mensajes recibidos: <span id="contador-ws">0</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="tip">
+    <strong>Tip DevTools:</strong>
+    F12 → Network → filtra por <code>Fetch/XHR</code> para ver los requests de polling.
+    Luego filtra por <code>WS</code> para ver la conexión WebSocket.
+    Compara la cantidad de entradas después de 60 segundos.
+  </div>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>

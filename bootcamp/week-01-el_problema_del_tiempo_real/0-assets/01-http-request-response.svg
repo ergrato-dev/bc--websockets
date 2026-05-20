@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 410" width="800" height="410">
+  <defs>
+    <marker id="ah-blue" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#0066CC"/>
+    </marker>
+    <marker id="ah-red" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#DA3633"/>
+    </marker>
+    <marker id="ah-green" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#2EA043"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="410" fill="#0D1117"/>
+
+  <!-- Title -->
+  <text x="400" y="30" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="15" font-weight="600" fill="#E6EDF3">
+    HTTP: el cliente siempre inicia — el servidor nunca puede hablar primero
+  </text>
+  <text x="400" y="50" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#6E7681">
+    3.600 requests/hora por usuario · la mayoría regresan vacíos
+  </text>
+
+  <!-- CLIENTE box -->
+  <rect x="40" y="64" width="116" height="46" rx="8" fill="#0D2137" stroke="#0066CC" stroke-width="2"/>
+  <text x="98" y="83" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="700" fill="#4D9FEC">CLIENTE</text>
+  <text x="98" y="100" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#8B949E">Navegador</text>
+
+  <!-- SERVIDOR box -->
+  <rect x="644" y="64" width="116" height="46" rx="8" fill="#0D2B15" stroke="#2EA043" stroke-width="2"/>
+  <text x="702" y="83" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="700" fill="#3FB950">SERVIDOR</text>
+  <text x="702" y="100" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#8B949E">FastAPI</text>
+
+  <!-- Lifelines -->
+  <line x1="98" y1="110" x2="98" y2="362" stroke="#21262D" stroke-width="1" stroke-dasharray="5,4"/>
+  <line x1="702" y1="110" x2="702" y2="362" stroke="#21262D" stroke-width="1" stroke-dasharray="5,4"/>
+
+  <!-- ── Ciclo 1 ── -->
+  <line x1="108" y1="145" x2="686" y2="145" stroke="#0066CC" stroke-width="1.5" marker-end="url(#ah-blue)"/>
+  <text x="397" y="140" text-anchor="middle" font-family="'Courier New', monospace" font-size="11" fill="#6E7681">GET /mensajes · ~620 bytes de headers</text>
+
+  <line x1="686" y1="163" x2="112" y2="163" stroke="#DA3633" stroke-width="1.5" stroke-dasharray="6,3" marker-end="url(#ah-red)"/>
+  <text x="397" y="158" text-anchor="middle" font-family="'Courier New', monospace" font-size="11" fill="#DA3633">200 OK · {"mensajes": []}  — vacío</text>
+
+  <rect x="74" y="172" width="48" height="20" rx="10" fill="#161B22" stroke="#30363D" stroke-width="1"/>
+  <text x="98" y="186" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#8B949E">1 seg</text>
+
+  <!-- ── Ciclo 2 ── -->
+  <line x1="108" y1="211" x2="686" y2="211" stroke="#0066CC" stroke-width="1.5" marker-end="url(#ah-blue)"/>
+  <text x="397" y="206" text-anchor="middle" font-family="'Courier New', monospace" font-size="11" fill="#6E7681">GET /mensajes · ~620 bytes de headers</text>
+
+  <line x1="686" y1="229" x2="112" y2="229" stroke="#DA3633" stroke-width="1.5" stroke-dasharray="6,3" marker-end="url(#ah-red)"/>
+  <text x="397" y="224" text-anchor="middle" font-family="'Courier New', monospace" font-size="11" fill="#DA3633">200 OK · {"mensajes": []}  — vacío</text>
+
+  <rect x="74" y="238" width="48" height="20" rx="10" fill="#161B22" stroke="#30363D" stroke-width="1"/>
+  <text x="98" y="252" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#8B949E">1 seg</text>
+
+  <!-- Evento: mensaje llega al servidor (mientras el cliente no sabe) -->
+  <circle cx="702" cy="259" r="5" fill="#E3B341"/>
+  <line x1="712" y1="259" x2="756" y2="259" stroke="#E3B341" stroke-width="1" opacity="0.7"/>
+  <text x="759" y="263" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#E3B341">mensaje llega</text>
+
+  <!-- ── Ciclo 3 (con datos) ── -->
+  <line x1="108" y1="277" x2="686" y2="277" stroke="#0066CC" stroke-width="1.5" marker-end="url(#ah-blue)"/>
+  <text x="397" y="272" text-anchor="middle" font-family="'Courier New', monospace" font-size="11" fill="#6E7681">GET /mensajes · ~620 bytes de headers</text>
+
+  <line x1="686" y1="295" x2="112" y2="295" stroke="#2EA043" stroke-width="2" marker-end="url(#ah-green)"/>
+  <text x="397" y="290" text-anchor="middle" font-family="'Courier New', monospace" font-size="11" fill="#2EA043">200 OK · {"mensajes": ["¡Hola!"]}  ✓</text>
+
+  <!-- Latency annotation: arrow showing the 2s delay -->
+  <line x1="738" y1="259" x2="738" y2="295" stroke="#E3B341" stroke-width="1.5" stroke-dasharray="3,2"/>
+  <text x="755" y="279" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#E3B341">2 seg</text>
+  <text x="755" y="291" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#E3B341">de retraso</text>
+
+  <!-- Warning box -->
+  <rect x="120" y="318" width="560" height="44" rx="7" fill="#1A0A0A" stroke="#DA3633" stroke-width="1.5"/>
+  <text x="400" y="335" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="600" fill="#DA3633">
+    ⚠  El servidor tenía el mensaje hace 2 segundos
+  </text>
+  <text x="400" y="352" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#8B949E">
+    no pudo enviarlo — tuvo que esperar a que el cliente preguntara por tercera vez
+  </text>
+
+  <!-- Footer: overhead note -->
+  <text x="400" y="390" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#484F58">
+    3 ciclos × ~640 bytes = 1.920 bytes de overhead · payload útil: 7 bytes ("¡Hola!")
+  </text>
+</svg>

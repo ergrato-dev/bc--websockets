@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Monitor de Métricas</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: Inter, system-ui, sans-serif;
+      background: #0D1117;
+      color: #E6EDF3;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 2rem;
+    }
+
+    h1 {
+      font-size: 1.4rem;
+      font-weight: 600;
+      margin-bottom: 0.3rem;
+    }
+
+    .subtitulo {
+      font-size: 0.85rem;
+      color: #8B949E;
+      margin-bottom: 2.5rem;
+    }
+
+    .tarjeta {
+      background: #161B22;
+      border: 1px solid #30363D;
+      border-radius: 12px;
+      padding: 2rem 2.5rem;
+      width: 100%;
+      max-width: 480px;
+    }
+
+    .metrica {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.8rem 0;
+      border-bottom: 1px solid #21262D;
+    }
+
+    .metrica:last-of-type { border-bottom: none; }
+
+    .metrica-label {
+      font-size: 0.85rem;
+      color: #8B949E;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .metrica-valor {
+      font-size: 1.6rem;
+      font-weight: 700;
+      font-variant-numeric: tabular-nums;
+      color: #4D9FEC;
+    }
+
+    .footer {
+      margin-top: 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.78rem;
+      color: #6E7681;
+    }
+
+    #estado { font-weight: 600; }
+    #timestamp { font-family: 'Courier New', monospace; }
+  </style>
+</head>
+<body>
+  <h1>Monitor de Métricas del Servidor</h1>
+  <p class="subtitulo">Proyecto Semana 01 — WebSockets Bootcamp</p>
+
+  <div class="tarjeta">
+    <div class="metrica">
+      <span class="metrica-label">CPU</span>
+      <span class="metrica-valor" id="cpu">--</span>
+    </div>
+    <div class="metrica">
+      <span class="metrica-label">Memoria RAM</span>
+      <span class="metrica-valor" id="memoria">--</span>
+    </div>
+    <div class="footer">
+      <span id="estado" style="color:#6E7681">○ Sin conexión</span>
+      <span id="timestamp">--:--:--</span>
+    </div>
+  </div>
+
+  <!-- Contador de intentos de reconexión (oculto hasta que sea relevante) -->
+  <p style="margin-top:1rem; font-size:0.78rem; color:#6E7681;">
+    Intentos de reconexión: <span id="intentos">0</span>
+  </p>
+
+  <script src="/static/monitor.js"></script>
+</body>
+</html>

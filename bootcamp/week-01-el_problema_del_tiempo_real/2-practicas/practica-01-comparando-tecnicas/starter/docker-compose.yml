@@ -1,0 +1,9 @@
+services:
+  api:
+    build: .
+    ports:
+      - "8000:8000"
+    volumes:
+      # Monta src/ y static/ para que los cambios se reflejen sin rebuild
+      - ./src:/app/src
+      - ./static:/app/static
