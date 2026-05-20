@@ -795,16 +795,34 @@ Cada semana incluye **tres tipos de evidencias**:
 
 ---
 
+## 📋 Orden Estricto de Creación de Contenido
+
+Cada semana se crea **en este orden exacto**, sin saltarse pasos:
+
+| # | Artefacto | Notas clave |
+|---|-----------|-------------|
+| 1 | `README.md` de la semana | Objetivos, requisitos previos, estructura, distribución 8h, entregables, navegación |
+| 2 | `rubrica-evaluacion.md` | Criterios 🧠 30% / 💪 40% / 📦 30% — mínimo 70% cada uno |
+| 3 | `1-teoria/` (archivos `.md`) | Explicar conceptos antes de crear los diagramas |
+| 4 | `0-assets/` (diagramas SVG) | Se crean **después** de redactar la teoría, para saber exactamente qué diagramas son necesarios. La **cantidad de SVGs depende de los temas**, no de ningún número fijo ni del repo de referencia. Cada SVG se **renderiza en el archivo de teoría** donde aporta comprensión, con `![descripción](../../0-assets/nombre.svg)` |
+| 5 | `2-practicas/` | Código comentado para descomentar — NO TODOs |
+| 6 | `3-proyecto/` | Código con TODOs — NO código comentado |
+| 7 | `4-recursos/` | ebooks, videografía, webgrafía |
+| 8 | `5-glosario/README.md` | Mínimo 8 términos, ordenados alfabéticamente |
+
+> ⚠️ **El paso 4 es crítico**: los SVGs son consecuencia del contenido teórico, no un requisito fijo.
+> No crear SVGs por cubrir una cuota — crear solo los que añadan comprensión real.
+
 ## ✅ Checklist para Nuevas Semanas
 
-- [ ] Crear estructura de carpetas completa
-- [ ] `README.md` con objetivos y distribución del tiempo (8h)
-- [ ] Material teórico en `1-teoria/` con SVGs vinculados
-- [ ] Ejercicios guiados en `2-practicas/` (formato descomentar)
-- [ ] Proyecto integrador en `3-proyecto/` (formato TODOs)
-- [ ] Recursos en `4-recursos/`
-- [ ] Glosario de términos en `5-glosario/`
-- [ ] Rúbrica de evaluación (`rubrica-evaluacion.md`)
+- [ ] 1. `README.md` con objetivos, distribución 8h y navegación ← →
+- [ ] 2. `rubrica-evaluacion.md` con los tres tipos de evidencia
+- [ ] 3. Archivos de teoría en `1-teoria/` redactados
+- [ ] 4. SVGs en `0-assets/` creados (solo los necesarios) y referenciados en teoría
+- [ ] 5. Ejercicios guiados en `2-practicas/` (formato descomentar)
+- [ ] 6. Proyecto integrador en `3-proyecto/` (formato TODOs)
+- [ ] 7. Recursos en `4-recursos/`
+- [ ] 8. Glosario en `5-glosario/README.md`
 - [ ] Verificar coherencia con semanas anteriores
 - [ ] Probar que todo el código de ejemplos funciona
 

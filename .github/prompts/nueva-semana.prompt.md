@@ -100,10 +100,24 @@ Estructura estándar de archivo de teoría:
 - Columnas: Término | Definición | Ejemplo de código (opcional)
 - Mínimo 8 términos relevantes al tema de la semana
 
+## Orden Estricto de Creación
+
+Respetar este orden sin excepciones:
+
+1. **`README.md`** — objetivos, estructura, 8h, entregables, navegación ← →
+2. **`rubrica-evaluacion.md`** — criterios 🧠/💪/📦, mínimo 70% por dimensión
+3. **`1-teoria/`** — redactar el contenido teórico completo primero
+4. **`0-assets/` (SVGs)** — crear **solo tras terminar la teoría**, para saber qué diagramas son realmente necesarios. Renderizar cada SVG en el archivo de teoría donde aporte comprensión: `![descripción](../../0-assets/nombre.svg)`. La cantidad la determinan los temas, no una cuota fija.
+5. **`2-practicas/`** — ejercicios con código comentado para descomentar
+6. **`3-proyecto/`** — starter con TODOs guiados
+7. **`4-recursos/`** — ebooks, videografía, webgrafía
+8. **`5-glosario/README.md`** — mínimo 8 términos, orden alfabético
+
 ## Restricciones
 
 - Idioma: español para documentación, inglés para código
-- SVGs: referenciar en teoría aunque se creen después
+- SVGs: creados después de la teoría, embedded en los archivos `.md` donde correspondan
+- Cantidad de SVGs: determinada por el contenido, nunca por una cuota
 - Versiones en package.json: exactas, sin `^` ni `~`
 - La carpeta `solution/` en `3-proyecto/` NO se crea (está en `.gitignore`)
 - Todo código Python: type hints obligatorios, async/await
